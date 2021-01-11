@@ -16,5 +16,5 @@ Github Unity Project Forked
   https://github.com/ivrylobs/unitylab2.git
   ```
   
-Lab 3
+Lab 3\
 Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab2/ \
