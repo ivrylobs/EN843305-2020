@@ -16,4 +16,5 @@ Github Unity Project Forked
   ```
   
 Lab 3\
-Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab2/ 
+Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab3/ \
+Error Screenshot: https://ivrylobs.github.io/EN843305-2020/Labs/lab3/error_screenshot.png
