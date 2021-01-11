@@ -6,7 +6,9 @@ Lab 1\
 Unity Publish URL https://play.unity.com/mg/other/unity-6w8 \
 Github Page https://ivrylobs.github.io/EN843305-2020/Labs/lab1/
 
-Lab 2\
+Lab 2
+
+Repo:https://ivrylobs.github.io/EN843305-2020/Labs/lab3/
 
 Github Unity Project Forked
 
