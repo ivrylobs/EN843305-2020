@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Position : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
+
     // Update is called once per frame
     void Update()
     {
+        
+      
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-2, 0, 0);
+            transform.position += new Vector3(-2 * Time.deltaTime, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
