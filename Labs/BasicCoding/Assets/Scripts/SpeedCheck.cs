@@ -32,6 +32,9 @@ public class SpeedCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckSpeed();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CheckSpeed();
+        }
     }
 }
