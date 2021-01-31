@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour
         if (isLeft)
         {
             rb.AddForce(Vector2.left * 10);
-        } else if (isLeft)
+        } else if (isRight)
         {
             rb.AddForce(Vector2.right * 10);
         }
