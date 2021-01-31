@@ -17,10 +17,10 @@ https://github.com/ivrylobs/unitylab2.git
 ```
 
 Lab 3\
-Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab3/ \
+Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab3/
 
 Lab 4\
-Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab4/ \
+Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab4/
 
 Lab 5\
-Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab5/ \
+Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab5/
