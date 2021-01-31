@@ -30,7 +30,7 @@ public class PlayerControl : MonoBehaviour
 
         if (isJump)
         {
-            rb.AddForce(Vector2.up * 10);
+            rb.AddForce(Vector2.up * 200);
             isJump = false;
         }
     }
