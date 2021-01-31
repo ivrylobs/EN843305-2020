@@ -6,13 +6,13 @@ public class PlayerControl : MonoBehaviour
 {
 
     public bool isLeft;
-    public book isRight;
-    public book isJump;
+    public bool isRight;
+    public bool isJump;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
