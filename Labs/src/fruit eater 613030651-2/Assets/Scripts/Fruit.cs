@@ -5,12 +5,13 @@ using UnityEngine;
 public class Fruit : MonoBehaviour
 {
         int countDestroy = 0;
-        public GameManager gameManager;
+        private GameManager gameManager;
         
     // Start is called before the first frame update
     void Start()
     {
-       
+       GameObject gameObject = GameObject.Find("GameManager");
+       gameManager = gameObject.GetComponent<GameManager>();
     }
 
     // Update is called once per frame

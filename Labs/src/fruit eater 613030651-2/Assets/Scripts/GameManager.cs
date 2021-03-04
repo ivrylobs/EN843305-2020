@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         height = Camera.main.orthographicSize * 2.0f;
         width = height * Screen.width / Screen.height;
 
-        InvokeRepeating("SpawnFruitWave", 1.0f, 2.0f);
+        InvokeRepeating("SpawnFruitWave", 0.5f, 2.0f);
 
         Left.transform.position = new Vector2(-width/2, 0);
         Right.transform.position = new Vector2(width/2, 0);
