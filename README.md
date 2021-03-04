@@ -27,3 +27,6 @@ Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab5/
 
 Basic Object Manipulating and Object Controlling\
 Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/objectmanipulate/
+
+Lab 6\
+Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab6/
