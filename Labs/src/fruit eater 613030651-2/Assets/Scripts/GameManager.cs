@@ -6,11 +6,13 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     // Declare variables
-    public int score;
+    public int score = 3;
     public int gameTime;
+    public int life;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timeText;
     public GameObject fruit;
+    
     float height;
     float width;
 

@@ -9,10 +9,17 @@ public class PlayerControl : MonoBehaviour
     public bool isRight;
     public bool isJump;
     Rigidbody2D rb;
+
+    Animator anim;
+    public float moveSpeed = 20;
+    public float jumpPower = 200;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,16 +29,27 @@ public class PlayerControl : MonoBehaviour
 
         if (isLeft)
         {
-            rb.AddForce(Vector2.left * 10);
+            rb.AddForce(Vector2.left * moveSpeed);
         } else if (isRight)
         {
-            rb.AddForce(Vector2.right * 10);
+            rb.AddForce(Vector2.right * moveSpeed);
         }
 
         if (isJump)
         {
-            rb.AddForce(Vector2.up * 200);
+            rb.AddForce(Vector2.up * jumpPower);
             isJump = false;
+            anim.SetBool("ground", false);
+        }
+
+        anim.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        if (GetComponent<Rigidbody2D>().velocity.x < 0)
+        {
+            Flip(true);
+            
+        } else {
+            Flip(false);
+            
         }
     }
 
@@ -76,5 +94,32 @@ public class PlayerControl : MonoBehaviour
     public void SetJump(bool b)
     {
         isJump = b;
+    }
+
+   
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Fruit")
+        {
+            Destroy(other.gameObject);
+        } else if(other.gameObject.name == "ground")
+        {
+            anim.SetBool("ground", true);
+        }
+    }
+
+    void Flip(bool isFlip)
+    {
+        Vector3 theScale = transform.localScale;
+        if(isFlip) {
+            if(transform.localScale.x > 0) {
+                theScale.x *=- 1;
+            }
+        } else {
+                if(transform.localScale.x < 0) {
+                    theScale.x *=-1; 
+                } 
+        }
+        transform.localScale = theScale;
     }
 }
