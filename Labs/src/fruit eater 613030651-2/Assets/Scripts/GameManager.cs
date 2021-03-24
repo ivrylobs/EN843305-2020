@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     // Declare variables
     public int score = 3;
     public int gameTime;
-    public int life;
+    public int life = 3;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timeText;
     public GameObject fruit;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
 
         Left.transform.position = new Vector2(-width/2, 0);
         Right.transform.position = new Vector2(width/2, 0);
+
     }
 
     // Update is called once per frame
@@ -43,37 +45,48 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = score + "";
         timeText.text = gameTime + "";
+
+        if (life == 0) {
+            GameObject.Find("GameOver").GetComponent<View>().MoveIn();
+        }
+    }
+
+    public void DecreaseLife()
+    {
+        life--;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Game");
     }
 
     void DecreaseTime()
     {
         gameTime--;
-        if (gameTime <= 0)
+        if (gameTime <= 0 || life <= 0)
         {
             CancelInvoke("DecreaseTime");
         }
     }
 
-    void SpawnFruit()
-    {
-        Vector2 position = new Vector2(Random.Range(-width/2, width/2), height/2);
-        Instantiate(fruit, position, Quaternion.identity);
-    }
-
     void SpawnFruitWave()
     {
-        if (waveCount > fruitWave[waveState].Length - 1)
+        if (life > 0)
         {
-            waveCount = 0;
-            waveState++;
-            if (waveState > fruitWave.Length - 1)
+            if (waveCount > fruitWave[waveState].Length - 1)
             {
-                CancelInvoke("SpawnFruitWave");
+                waveCount = 0;
+                waveState++;
+                if (waveState > fruitWave.Length - 1)
+                {
+                    CancelInvoke("SpawnFruitWave");
+                }
             }
+            int fruitPosition = int.Parse(fruitWave[waveState][waveCount].ToString());
+            Vector2 position = new Vector2(-width/2 + (width/10f) * fruitPosition, height/2);
+            Instantiate(fruit, position, Quaternion.identity);
+            waveCount++;
         }
-        int fruitPosition = int.Parse(fruitWave[waveState][waveCount].ToString());
-        Vector2 position = new Vector2(-width/2 + (width/10f) * fruitPosition, height/2);
-        Instantiate(fruit, position, Quaternion.identity);
-        waveCount++;
     }
 }

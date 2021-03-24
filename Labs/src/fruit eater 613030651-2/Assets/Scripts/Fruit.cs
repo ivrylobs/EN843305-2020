@@ -30,6 +30,7 @@ public class Fruit : MonoBehaviour
             
             if(countDestroy > 1) {
                 Destroy(gameObject);
+                gameManager.DecreaseLife();
             }
         }
     }
