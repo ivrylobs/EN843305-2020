@@ -34,5 +34,8 @@ Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab6/
 Lab 7\
 Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab7/
 
+Lab 8\
+Github Page: Still in Maintenance !!! \
+
 Lab 9\
 Github Page: https://ivrylobs.github.io/EN843305-2020/Labs/lab9/
